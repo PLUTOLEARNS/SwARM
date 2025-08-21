@@ -1,0 +1,31 @@
+# Default configuration for SwARM Intrusion Detection System
+
+swarm:
+  max_agents: 10
+  consensus_threshold: 0.7
+  communication_interval: 5
+  agent_timeout: 30
+
+detection:
+  anomaly_threshold: 0.8
+  signature_database: 'data/signatures.yaml'
+  ml_model_path: 'models/anomaly_detector.pkl'
+  update_interval: 60
+
+network:
+  interface: 'auto'
+  capture_filter: ''
+  packet_buffer_size: 1000
+  monitoring_enabled: true
+
+logging:
+  level: 'INFO'
+  format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+  file: 'logs/swarm_ids.log'
+  max_size: '10MB'
+  backup_count: 5
+
+database:
+  type: 'sqlite'
+  path: 'data/swarm_ids.db'
+  backup_interval: 3600

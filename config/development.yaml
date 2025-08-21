@@ -1,0 +1,86 @@
+# Development configuration for SwARM IDS
+# Enhanced with ML, Database, and Dashboard features
+
+# Swarm configuration
+swarm:
+  agent_count: 2
+  max_agents: 3
+  consensus_threshold: 0.7
+  communication_interval: 2
+  agent_timeout: 15
+  communication_protocol: "tcp"
+  port_range:
+    start: 8000
+    end: 8010
+
+# Detection configuration
+detection:
+  anomaly_threshold: 0.6
+  update_interval: 30
+  ddos:
+    packet_threshold: 100
+    time_window: 60
+  port_scan:
+    port_threshold: 10
+    time_window: 60
+  connection_flood:
+    connection_threshold: 50
+    time_window: 60
+
+# Network monitoring configuration
+network:
+  monitoring_enabled: true  # Enable for testing real detection
+  interface: "auto"
+  capture_filter: ""
+  packet_buffer_size: 1000
+  analysis_interval: 5
+  suspicious_threshold:
+    connection_count: 100
+    packet_rate: 50
+    port_scan_threshold: 10
+
+# Machine Learning configuration
+ml:
+  models:
+    anomaly_detector:
+      contamination: 0.1
+      n_estimators: 100
+      retrain_interval_hours: 24
+    threat_classifier:
+      n_estimators: 100
+      max_depth: 10
+      retrain_threshold: 1000
+  adaptive_learning:
+    enabled: true
+    feedback_buffer_size: 1000
+    min_samples_retrain: 100
+
+# Database configuration  
+database:
+  path: "data/swarm_ids_dev.db"
+  cleanup_days: 30
+  backup_enabled: true
+  backup_interval_hours: 24
+
+# Web Dashboard configuration
+dashboard:
+  enabled: true
+  host: "127.0.0.1"
+  port: 5000
+  auto_refresh_seconds: 5
+  max_alerts_display: 100
+
+# Logging configuration
+logging:
+  level: "DEBUG"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "logs/swarm_ids_dev.log"
+  max_size: "10MB"
+  backup_count: 5
+  rotation: true
+
+# Metrics configuration
+metrics:
+  enabled: true
+  collection_interval: 30
+  retention_days: 7

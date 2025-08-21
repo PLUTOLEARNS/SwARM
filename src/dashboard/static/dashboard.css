@@ -1,0 +1,83 @@
+
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.status-indicators {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.alert-row {
+    cursor: pointer;
+}
+
+.alert-row:hover {
+    background-color: #f8f9fa;
+}
+
+.severity-badge {
+    font-weight: bold;
+}
+
+.severity-CRITICAL {
+    background-color: #dc3545 !important;
+}
+
+.severity-HIGH {
+    background-color: #fd7e14 !important;
+}
+
+.severity-MEDIUM {
+    background-color: #0dcaf0 !important;
+}
+
+.severity-LOW {
+    background-color: #6c757d !important;
+}
+
+.ml-confidence {
+    border-radius: 10px;
+    padding: 2px 8px;
+    font-size: 0.8em;
+}
+
+.confidence-high {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.confidence-medium {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.confidence-low {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.chart-container {
+    position: relative;
+    height: 300px;
+}
+
+#connection-status.disconnected {
+    background-color: #dc3545 !important;
+}
+
+.new-alert {
+    animation: highlightAlert 2s ease-in-out;
+}
+
+@keyframes highlightAlert {
+    0% { background-color: #fff3cd; }
+    100% { background-color: transparent; }
+}
