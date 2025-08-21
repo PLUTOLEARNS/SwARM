@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Tests](https://img.shields.io/badge/Tests-71/72_Passing-brightgreen.svg)]()
 
-**SwARM** (**Sw**arm **A**gent **R**esponse **M**onitoring) is a proof-of-concept intrusion detection system that demonstrates swarm intelligence principles and agent coordination for network security monitoring.
+**SwARM** (**Sw**arm **A**gent **R**esponse **M**onitoring) is an intrusion detection system that demonstrates swarm intelligence principles and agent coordination for network security monitoring.
 
 ## What This Project Actually Is
 
