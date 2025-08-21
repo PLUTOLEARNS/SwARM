@@ -260,9 +260,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Support
 
-- **Issues**: [GitHub Issues](https://github.com/yourusername/SwARM/issues)
-- **Documentation**: [Project Wiki](https://github.com/yourusername/SwARM/wiki)
-- **Email**: your.email@example.com
+- **Issues**: [GitHub Issues](https://github.com/PLUTOLEARNS/SwARM/issues)
+- **Email**: titantheven@gmail.com
 
 ---
 
